@@ -1,27 +1,47 @@
 var stage = new Konva.Stage({
-    container: 'container',   // id of container <div>
-    width: 160,
-    height: 160
+    container:'container',
+    width:500,
+    height:300
   });
   
-  // then create a layer
   var layer = new Konva.Layer();
   
-  // create our shape
-  var circle = new Konva.Circle({
-    x: stage.width() / 2,   // x position of the center
-    y: stage.height() / 2,  // y position of the center
-    radius: 70,             // circle radius
-    fill: 'red',            // color to fill the area
-    stroke: 'black',        // color to draw the line
-    strokeWidth: 4          // line width
+  var triangle_1 = new Konva.RegularPolygon({
+    x:50,
+    y:50,
+    sides:3,
+    radius:50,
+    fill:'green'
   });
   
-  // add the shape to the layer
-  layer.add(circle);
+  var triangle_2 = new Konva.RegularPolygon({
+    x:50,
+    y:80,
+    sides:3,
+    radius:50,
+    fill:'green'
+  });
   
-  // add the layer to the stage
+  var triangle_3 = new Konva.RegularPolygon({
+    x:50,
+    y:110,
+    sides:3,
+    radius:50,
+    fill:'green'
+  });
+  
+  
+  var rect = new Konva.Rect({
+    x:40,
+    y:135, 
+    width:20,
+    height:50,
+    fill:'brown'
+  });
+  
+  layer.add(triangle_1);
+  layer.add(triangle_2);
+  layer.add(triangle_3);
+  layer.add(rect);
   stage.add(layer);
-  
-  // draw the image
   layer.draw();
