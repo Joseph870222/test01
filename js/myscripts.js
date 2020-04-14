@@ -1,9 +1,10 @@
-<script src="https://unpkg.com/konva@3.4.1/konva.min.js"></script>
-var stage = new Konva.Stage({
+
+
+  var stage = new Konva.Stage({
     container:'container',
     width:500,
     height:300
-  });
+    });
   
   var layer = new Konva.Layer();
   
@@ -46,3 +47,4 @@ var stage = new Konva.Stage({
   layer.add(rect);
   stage.add(layer);
   layer.draw();
+  
